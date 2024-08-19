@@ -10,7 +10,7 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:3034/login', {
+    const response = await fetch('https://hook.us1.make.com/88w29h3pcwetqbbm16tp1sudcu8hdn1q', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const Login = ({ onLogin }) => {
               {message && <Typography color="error" align="center">{message}</Typography>}
               <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <TextField
-                  label="Correo electrónico o número de teléfono"
+                  label="Correo electrónico "
                   variant="outlined"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
